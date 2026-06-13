@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shua 的个人简历网站，展示经历、技能、项目和联系方式。">
+    <meta name="theme-color" content="#0f8b8d">
+    <meta property="og:title" content="Shua | 个人简历">
+    <meta property="og:description" content="精致、响应式、可部署到 GitHub Pages 的个人简历网站。">
+    <meta property="og:type" content="website">
+    <title>Shua | 个人简历</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主体内容</a>
+
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="主导航">
+        <a class="brand-mark" href="#home" aria-label="返回首页">
+          <span class="brand-initial" data-field="initials">S</span>
+          <strong data-field="name">Shua</strong>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+          菜单
+        </button>
+
+        <div class="nav-links" id="siteNav">
+          <a href="#profile">简介</a>
+          <a href="#skills">技能</a>
+          <a href="#experience">经历</a>
+          <a href="#projects">项目</a>
+          <a href="#contact">联系</a>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深浅色">浅色</button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero-section" id="home">
+        <div class="content-wrap hero-grid">
+          <div class="hero-copy reveal">
+            <p class="status-pill" data-field="availability">Open to remote / hybrid roles</p>
+            <h1 data-field="name">Shua</h1>
+            <p class="hero-role" data-field="role">前端开发 / 全栈工程师</p>
+            <p class="hero-text" data-field="tagline">把复杂系统做成清楚、可靠、好用的产品体验。</p>
+
+            <div class="hero-actions" aria-label="简历操作">
+              <a class="primary-button" data-link="email" href="mailto:yrk0209271@gmail.com">联系我</a>
+              <button class="secondary-button" id="printButton" type="button">下载 PDF</button>
+              <a class="ghost-button" data-link="github" href="https://github.com/yrk0209271-web" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+
+            <ul class="hero-highlights" id="heroHighlights"></ul>
+          </div>
+
+          <aside class="identity-panel reveal" aria-label="个人名片">
+            <div class="portrait-frame">
+              <span data-field="initials">S</span>
+            </div>
+            <div class="identity-body">
+              <p class="identity-label">Profile</p>
+              <h2 data-field="name">Shua</h2>
+              <p data-field="currentFocus">专注于现代 Web、产品体验与工程效率。</p>
+            </div>
+            <dl class="identity-list">
+              <div>
+                <dt>所在地</dt>
+                <dd data-field="location">China</dd>
+              </div>
+              <div>
+                <dt>邮箱</dt>
+                <dd><a data-link="emailText" href="mailto:yrk0209271@gmail.com">yrk0209271@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>方向</dt>
+                <dd data-field="specialty">Frontend, Product, AI Tools</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="metric-section" aria-label="关键亮点">
+        <div class="content-wrap metric-grid" id="metrics"></div>
+      </section>
+
+      <section class="section-band" id="profile">
+        <div class="content-wrap two-column">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>个人简介</h2>
+          </div>
+          <div class="profile-copy reveal">
+            <p data-field="summary"></p>
+            <p data-field="intro"></p>
+            <div class="value-strip" id="values"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band soft-band" id="skills">
+        <div class="content-wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>能力结构</h2>
+          </div>
+          <div class="skill-grid" id="skillGroups"></div>
+        </div>
+      </section>
+
+      <section class="section-band" id="experience">
+        <div class="content-wrap two-column">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>经历时间线</h2>
+          </div>
+          <div class="timeline" id="experienceList"></div>
+        </div>
+      </section>
+
+      <section class="section-band soft-band" id="projects">
+        <div class="content-wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>精选项目</h2>
+          </div>
+          <div class="project-grid" id="projectList"></div>
+        </div>
+      </section>
+
+      <section class="section-band" id="education">
+        <div class="content-wrap two-column">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Education</p>
+            <h2>教育与证书</h2>
+          </div>
+          <div class="education-list" id="educationList"></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="content-wrap contact-panel reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>一起做点漂亮又可靠的东西</h2>
+            <p data-field="contactNote"></p>
+          </div>
+          <div class="contact-actions">
+            <a class="primary-button" data-link="email" href="mailto:yrk0209271@gmail.com">发送邮件</a>
+            <button class="secondary-button" id="copyEmailButton" type="button">复制邮箱</button>
+            <a class="ghost-button" data-link="linkedin" href="#" target="_blank" rel="noreferrer" hidden>LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-wrap footer-inner">
+        <span>© <span id="currentYear"></span> <span data-field="name">Shua</span></span>
+        <span>Built for GitHub Pages</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
