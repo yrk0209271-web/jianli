@@ -1,12 +1,12 @@
 # Shua Resume Website
 
-一个精致的个人简历网站，使用纯静态 HTML、CSS 和 JavaScript 构建，适合直接部署到 GitHub Pages。
+一个参考 Kards 简历模板气质重做的个人简历网站，使用纯静态 HTML、CSS 和 JavaScript 构建，适合直接部署到 GitHub Pages。
 
 ## 文件结构
 
 - `index.html`：页面结构与 SEO 元信息
-- `styles.css`：视觉系统、响应式布局、打印样式
-- `app.js`：简历数据、渲染逻辑、主题切换和交互
+- `styles.css`：Kards 风格视觉系统、响应式布局、打印样式
+- `app.js`：简历数据、渲染逻辑、菜单、项目、时间线和交互
 - `.github/workflows/pages.yml`：GitHub Pages 自动部署工作流
 - `.nojekyll`：让 GitHub Pages 直接按静态文件发布
 
@@ -14,12 +14,12 @@
 
 打开 `app.js`，修改顶部的 `resume` 对象：
 
-- `name`、`role`、`tagline`：首页主视觉文字
-- `email`、`github`、`linkedin`：联系方式
-- `skills`：能力结构
-- `experience`：工作、实习或项目经历
+- `name`、`roles`、`summary`：首页和简介文字
+- `email`、`github`、`socialLinks`：联系方式与社交链接
+- `skillBars`：技能进度条
+- `timeline`：工作、教育、证书或项目经历
 - `projects`：精选项目
-- `education`：教育背景、证书或奖项
+- `services`：能力服务说明
 
 ## 本地预览
 
